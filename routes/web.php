@@ -11,8 +11,16 @@
 |
 */
 
-Route::get('/', 'HomeController@index');
-
 Route::get('/register', 'AuthController@register');
 
 Route::post('/welcome', 'AuthController@welcome');
+
+Route::get('/', function()
+{
+    return view('newIndex');
+});
+
+Route::get('/data-tables', function()
+{
+    return view('dataTables');
+});
